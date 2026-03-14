@@ -9,9 +9,8 @@ def show_menu():
     print("\n--- CHƯƠNG TRÌNH CÂY ĐỎ ĐEN (RED-BLACK TREE) ---")
     print("1. Thêm phần tử vào cây")
     print("2. Tìm kiếm một giá trị")
-    print("3. Xóa một phần tử (Coming soon)")
-    print("4. Duyệt cây (In-order)")
-    print("5. Thoát")
+    print("3. Duyệt cây (In-order)")
+    print("4. Thoát")
     print("------------------------------------------------")
 
 def main():
@@ -19,7 +18,7 @@ def main():
     
     while True:
         show_menu()
-        choice = input("Lựa chọn của bạn (1-5): ")
+        choice = input("Lựa chọn của bạn (1-4): ")
 
         if choice == '1':
             try:
@@ -39,14 +38,11 @@ def main():
                 print(f"Không tìm thấy {val} trong cây.")
 
         elif choice == '3':
-            print("Chức năng xóa đang được cập nhật...")
-
-        elif choice == '4':
             print("Cấu trúc cây hiện tại (In-order):")
             # Giả sử bạn đã viết hàm này trong RedBlackTree
             tree.print_tree() 
 
-        elif choice == '5':
+        elif choice == '4':
             print("Tạm biệt!")
             break
         else:
