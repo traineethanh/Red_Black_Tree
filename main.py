@@ -22,11 +22,17 @@ def main():
 
         if choice == '1':
             try:
-                val = int(input("Nhập giá trị muốn thêm: "))
-                tree.insert(val)
-                print(f"Đã thêm {val} vào cây.")
+                line = input("Nhập các số muốn thêm (cách nhau bằng dấu phẩy hoặc khoảng trắng): ")
+                import re
+                values = re.split(r'[,\s]+', line.strip())
+                
+                for v in values:
+                    if v:
+                        val = int(v)
+                        tree.insert(val)
+                        print(f"Đã thêm {val} thành công!")
             except ValueError:
-                print("Lỗi: Vui lòng nhập số nguyên!")
+                print("Lỗi: Có giá trị không phải là số nguyên!")
 
         elif choice == '2':
             val = int(input("Nhập giá trị cần tìm: "))
