@@ -1,11 +1,11 @@
 import sys
 import os
-
+import io
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from src.rbt_tree import RedBlackTree
 
-def show_menu():
+def show_menu():    
     print("\n--- CHƯƠNG TRÌNH CÂY ĐỎ ĐEN (RED-BLACK TREE) ---")
     print("1. Thêm phần tử vào cây")
     print("2. Tìm kiếm một giá trị")
