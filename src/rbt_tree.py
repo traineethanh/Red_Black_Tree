@@ -2,7 +2,6 @@ from src.rbt_node import Node
 
 class RedBlackTree:
     def __init__(self):
-        # TNULL là node lá (NIL) dùng để đại diện cho các nhánh trống
         self.TNULL = Node(0)
         self.TNULL.color = 0
         self.TNULL.left = None
@@ -113,7 +112,7 @@ class RedBlackTree:
 
         self.fix_insert(node)
 
-    # --- Các hàm hỗ trợ Menu ---
+    # --- Các hàm hỗ trợ ---
     def search_tree_helper(self, node, key):
         if node == self.TNULL or key == node.data:
             return node

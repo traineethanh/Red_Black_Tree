@@ -45,7 +45,6 @@ def main():
 
         elif choice == '3':
             print("Cấu trúc cây hiện tại (In-order):")
-            # Giả sử bạn đã viết hàm này trong RedBlackTree
             tree.print_tree() 
 
         elif choice == '4':
